@@ -10,8 +10,77 @@
     src: url(../font/ocr-a-std/OCRAStd.otf);
 }
 
+.btnKraos1 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #367639;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px #fff;
+}
+
+.btnKraos1:hover {
+    background-color: #14471E
+}
+
+.btnKraos1:active {
+    background-color: #14471E;
+    box-shadow: 0 2px #fff;
+    transform: translateY(2px);
+}
+
+.csharp {
+    color: #178600;
+    font-weight: bold;
+}
+
+.java {
+    color: #b07219;
+    font-weight: bold;
+}
+
+.sql {
+    color: #00758f;
+    font-weight: bold;
+}
+
+.unity {
+    color: #808080;
+    font-weight: bold;
+}
+
+.keyword {
+    color: #FFEE00;
+    font-weight: bold;
+}
+
+.textKraos1 {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.subtitleKraos1 {
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.btnTogglerKraos {
+    border: none !important;
+    box-shadow: none !important;
+    font-family: OCRAStd;
+    text-shadow: 5px 5px 5px #000000;
+    color: #fff !important;
+    font-size: 2em;
+}
+
 .darkSectionContent {
-    padding: 0vh 10vh 10vh 10vh;
+    padding-bottom: 10vh;
 }
 
 .darkBgSection {
@@ -68,7 +137,7 @@
     bottom: 0;
     position: absolute;
     transition: all 0.4s;
-    
+
 }
 
 .navItemKraos {
