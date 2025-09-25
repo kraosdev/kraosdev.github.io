@@ -1,3 +1,42 @@
+const navbar = document.querySelector('.navbarKraosBg');
+
+// al cargar la página, empieza como transparente/oculto
+navbar.classList.add('transparent');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+    navbar.classList.remove('transparent');
+  } else {
+    navbar.classList.add('transparent');
+    navbar.classList.remove('scrolled');
+  }
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      //const offset = 200; // margen superior en píxeles
+      const offset = navbar.offsetHeight;
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+
+
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
