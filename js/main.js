@@ -1,6 +1,5 @@
 const navbar = document.querySelector('.navbarKraosBg');
 
-// al cargar la página, empieza como transparente/oculto
 navbar.classList.add('transparent');
 
 window.addEventListener('scroll', () => {
@@ -21,7 +20,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      //const offset = 200; // margen superior en píxeles
+      //const offset = 200;
       const offset = navbar.offsetHeight;
       const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
@@ -33,8 +32,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
     }
   });
 });
-
-
 
 
 function getRndInteger(min, max) {
